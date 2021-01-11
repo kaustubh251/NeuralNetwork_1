@@ -126,7 +126,7 @@ theta1, theta2 = backPropagation(dataX, dataY, theta1_initial, theta2_initial, r
 p = 0
 for x in range(int(len(dataX)/20)):
     for y in range(int(len(dataX[0])/20 - 15)):
-        x1, y1 = trainingExampleProvider(x, y, dataX, dataY)
+        x1, y1 = trainingExampleProvider(x, (y+15), dataX, dataY)
         a2, a3 = outputBlackBox(x1, theta1, theta2)
         max = a3[0]
         maxIndex = 0
